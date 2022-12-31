@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+version="3.1">
+
+
+<!-- create servlet path and servlet mapping to connect client view reservation  details page and servlet -->
+<servlet>
+  <servlet-name>viewCustomer</servlet-name>
+  <servlet-class>com.client.ViewServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>viewCustomer</servlet-name>
+   <url-pattern>/view</url-pattern>
+</servlet-mapping>
+
+<!-- create servlet path and servlet mapping to connect client insert reservation details page and servlet -->
+<servlet>
+  <servlet-name>clientInsert</servlet-name>
+  <servlet-class>com.client.ClientInsert</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>clientInsert</servlet-name>
+  <url-pattern>/insert</url-pattern>
+</servlet-mapping>
+
+<!-- create servlet path and servlet mapping to connect admin to read all reservation details page and servlet -->
+<servlet>
+  <servlet-name>readData</servlet-name>
+  <servlet-class>com.client.ReservationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>readData</servlet-name>
+  <url-pattern>/read</url-pattern>
+</servlet-mapping>
+
+<!-- create servlet path and servlet mapping to connect admin to update reservation details page and servlet -->
+<servlet>
+  <servlet-name>updateData</servlet-name>
+  <servlet-class>com.client.UpdateServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updateData</servlet-name>
+  <url-pattern>/update</url-pattern>
+</servlet-mapping>
+
+<!-- create servlet path and servlet mapping to connect admin to delete reservation details page and servlet -->
+<servlet>
+  <servlet-name>deleteData</servlet-name>
+  <servlet-class>com.client.DeleteReservationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>deleteData</servlet-name>
+  <url-pattern>/delete</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
